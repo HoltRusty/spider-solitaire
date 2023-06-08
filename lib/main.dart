@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:spider_solitaire/components/game_board.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -28,12 +31,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool isComplete = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green,
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      body: GameBoard(),
     );
   }
 }
